@@ -195,19 +195,7 @@ body {
     transform: rotate(0deg) scale(1);
   }
 }
-@keyframes blinkLeft2 {
-  90% {
-    transform: none;
-    animation-timing-function: ease-in;
-  }
-  93% {
-    tranform: translateY(15px) scaleY(0);
-  }
-  100% {
-    animation-timing-function: ease-out;
-  }
-}
-@keyframes blinkLeft {
+@keyframes blink {
   0%, 10%, 100% {
     transform: scaleY(1);
   }
@@ -215,36 +203,95 @@ body {
     transform: scaleY(0.2);
   }
 }
-/* line 156, ../sass/main.sass */
+@keyframes smoke1 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+@keyframes smoke2 {
+  0%, 100% {
+    transform: translate(12px, 0px);
+  }
+  50% {
+    transform: translate(12px, 10px);
+  }
+}
+@keyframes smoke3 {
+  0%, 100% {
+    transform: translate(25px, 0px);
+  }
+  50% {
+    transform: translate(25px, 10px);
+  }
+}
+@keyframes dart {
+  0% {
+    transform: translateY(130px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 176, ../sass/main.sass */
 #shine1 {
   animation: shine 2s infinite;
   transform-origin: 160px 85px;
 }
 
-/* line 160, ../sass/main.sass */
+/* line 180, ../sass/main.sass */
 #shine2 {
   animation: shine 2s 1s infinite;
   transform-origin: 230px 155px;
 }
 
-/* line 164, ../sass/main.sass */
+/* line 184, ../sass/main.sass */
 #shine3 {
   animation: shine 2s 0.5s infinite;
   transform-origin: 160px 200px;
 }
 
-/* line 168, ../sass/main.sass */
+/* line 188, ../sass/main.sass */
 #paEsquerda {
   transform-origin: 61px 254px;
 }
 
-/* line 171, ../sass/main.sass */
+/* line 191, ../sass/main.sass */
 #paDireita {
   transform-origin: 221px 257px;
 }
 
-/* line 174, ../sass/main.sass */
+/* line 194, ../sass/main.sass */
 .eyes {
-  animation: blinkLeft 4s 2s infinite;
+  animation: blink 4s 2s infinite;
   transform-origin: 0px 380px;
+}
+
+/* line 198, ../sass/main.sass */
+#fumaca1 {
+  animation: smoke1 2s infinite;
+}
+
+/* line 201, ../sass/main.sass */
+#fumaca2 {
+  animation: smoke2 2s infinite;
+}
+
+/* line 204, ../sass/main.sass */
+#fumaca3 {
+  animation: smoke3 2s infinite;
+}
+
+/* line 207, ../sass/main.sass */
+#dart {
+  animation: dart 2s infinite;
 }
